@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from 'tailwindcss/defaultTheme';
 
 export default {
 	darkMode: ["class"],
@@ -52,6 +53,10 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+        success: {
+          DEFAULT: 'hsl(var(--success))',
+          foreground: 'hsl(var(--success-foreground))'
+        },
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -68,6 +73,9 @@ export default {
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
 			},
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif', ...defaultTheme.fontFamily.sans],
+      },
 			keyframes: {
 				'accordion-down': {
 					from: {
